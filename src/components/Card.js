@@ -1,11 +1,11 @@
 import './Card.css'
 
-export default function Card() {
+export default function Card({title, description, date}) {
     return (
         <div className="article-card">
-            <h3>Article Title Here</h3>
-                <p>Article Description Here</p>
-                <p>Article Date Here</p>
+            <h3>{title}</h3>
+                <p>{description}</p>
+                <p>{date}</p>
                 <img/>
         </div>
     )
