@@ -3,6 +3,7 @@ import { Router } from 'react-router-dom';
 import './App.css';
 import Nav from './components/Nav'
 import Card from './components/Card'
+import Search from './components/Search'
 import ArticleFocus from './components/ArticleFocus'
 import { Routes, Route } from 'react-router-dom'
 import  articleData from './ArticleMockData';
@@ -30,7 +31,7 @@ const App = () => {
         setContent(article.content)
         setDate(article.publishedAt)
         setImg(article.urlToImage)
-    
+        setSearch("")
       }
     })
     console.log(e.target.id, 'e.target.id')
@@ -71,7 +72,8 @@ const searchResults = articleData.articles.filter(article => article.title.toLow
 
   return (
     <div className="App">
-     <Nav search={search} setSearch={setSearch} />
+     <Nav />
+     <Search search={search} setSearch={setSearch}/> 
       <Routes>
         <Route path="/" element={ <div className="home">
           {!search ? <p>{articleCards}</p> : searchResults }

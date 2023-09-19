@@ -1,12 +1,11 @@
-import './Nav.css'
+import './Search.css'
 
-export default function Nav() {
+export default function Search({search, setSearch, searchResults}) {
 
 
     return (
-        <nav className="nav">
-            <h1>NEWS</h1>
-            {/* <form className="search-bar">
+        <div className="search-container">
+            <form className="search-bar">
                 <input
                 className="search"
                 type="text"
@@ -14,7 +13,7 @@ export default function Nav() {
                 value={search}
                 onChange={e => setSearch(e.target.value)}
                 />
-            </form> */}
-        </nav>
+            </form>
+        </div>
     )
 }
