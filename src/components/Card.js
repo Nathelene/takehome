@@ -4,18 +4,22 @@ import { NavLink } from 'react-router-dom'
  const Card = ({title, description, date, img, selectArticle}) => {
 
     return (
-        <NavLink to={`/article/${title}`}>
+       
             <div className="article-card">
-        <button onClick={selectArticle} id={title}>
+
+                 <NavLink to={`/article/${title}`}>
+                 <button onClick={selectArticle} id={title} className="card-button">
            
                 <h3>{title}</h3>
                     <p>{description}</p>
                     <p>{date}</p>
-                    <img src={img}/>  
+                    <img className="image" src={img}/>  
           
-        </button>
+                    </button>
+        </NavLink>
+       
         </div>
-       </NavLink>
+      
     )
 }
 
