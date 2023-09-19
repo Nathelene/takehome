@@ -1,0 +1,15 @@
+.focus-image {
+    height: 45vh;
+    width:45vw
+}
+
+.back-button {
+    margin-top: 3%;
+    background-color: transparent;
+    border:none;
+}
+
+.focus-card {
+    height:60vh;
+    width:60vw
+}

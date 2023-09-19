@@ -4,15 +4,15 @@ import { NavLink } from 'react-router-dom'
  const ArticleFocus = ({title, description, date, img, content, clear}) => {
 
     return (
-        <div className="article-card">
+        <div className="focus-card">
             <NavLink to={"/"}>
-            <button onClick={clear}>Back</button>
+            <button className="back-button" onClick={clear}>BACK</button>
             </NavLink>
             <h3>{title}</h3>
                 <p>{description}</p>
                 <p>{content}</p>
                 <p>{date}</p>
-                <img src={img}/>
+                <img className="focus-image" src={img}/>
         </div>
     )
 }

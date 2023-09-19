@@ -1,0 +1,10 @@
+nav {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height:14vh;
+    border-bottom: 3px solid black;
+    width:90vw;
+    margin-bottom: 3%;
+}
+
