@@ -5,14 +5,16 @@ import { NavLink } from 'react-router-dom'
 
     return (
         <NavLink to={`/article/${title}`}>
-        <button onClick={selectArticle} id={title}>
             <div className="article-card">
+        <button onClick={selectArticle} id={title}>
+           
                 <h3>{title}</h3>
                     <p>{description}</p>
                     <p>{date}</p>
                     <img src={img}/>  
-            </div>
+          
         </button>
+        </div>
        </NavLink>
     )
 }
