@@ -18,6 +18,8 @@ const App = () => {
   const [img, setImg] = useState("")
   const [search, setSearch] = useState("")
 
+  
+
   //https://newsapi.org/v2/everything?q=Apple&from=2023-09-18&sortBy=popularity&apiKey=API_KEY
   //KEY = 661718b383d64c97a5b747739086a400
   
@@ -32,6 +34,7 @@ const App = () => {
         setDate(article.publishedAt)
         setImg(article.urlToImage)
         setSearch("")
+   
       }
     })
     console.log(e.target.id, 'e.target.id')
@@ -75,9 +78,9 @@ const searchResults = articleData.articles.filter(article => article.title.toLow
      <Search search={search} setSearch={setSearch} searchResults={searchResults}/>
       <Routes>
         <Route path="/" element={ <div className="home">
-          {!search ?  <p>{articleCards}</p>  : searchResults }
+          { !search ?  <p>{articleCards}</p>  : searchResults }
           </div>}/>
-        <Route path="/article/:title" element={ <ArticleFocus title={title} description={description} content={content} date={date} img={img} clear={clear}/> } />
+        <Route path="/article/:title" element={ !search ?<ArticleFocus title={title} description={description} content={content} date={date} img={img} clear={clear}/> : searchResults } />
       </Routes>
     </div>
   );
