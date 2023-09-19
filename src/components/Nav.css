@@ -8,3 +8,19 @@ nav {
     margin-bottom: 3%;
 }
 
+@media screen and (max-width: 1137px) {
+    .intro {
+      width:50%;
+      margin-left:25%;
+    }
+    .get-random-button {
+      margin-left: 42%;
+    }
+  }
+  
+  @media screen and (max-width: 1010px) {
+    .get-random-button {
+      width:35vw;
+      margin-left: 34%;
+    }
+  }
