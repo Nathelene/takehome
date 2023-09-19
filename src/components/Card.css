@@ -98,6 +98,18 @@
         margin-bottom: 15%;
     }
   }
+
+  @media screen and (max-width: 300px) {
+    .article-card {
+        height:65vh;
+        width:70vw;
+    }
+    
+    .image {
+        height: 15vh;
+        margin-bottom: 20%;
+    }
+  }
   
 
   

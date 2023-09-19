@@ -1,6 +1,7 @@
 .focus-image {
     height: 45vh;
-    width:45vw
+    width:45vw;
+    margin-bottom:15%;
 }
 
 .back-button {
@@ -14,19 +15,41 @@
     width:60vw
 }
 
-@media screen and (max-width: 1137px) {
-    .intro {
-      width:50%;
-      margin-left:25%;
+@media screen and (max-width: 912px) {
+    .focus-image {
+        height: 30vh;
+        width:70vw
     }
-    .get-random-button {
-      margin-left: 42%;
+    
+    .focus-card {
+        height:65vh;
+        width:70vw
+    }
+  }
+
+  @media screen and (max-width: 414px) {
+    .focus-image {
+        height: 23vh;
+        width:70vw
+    }
+    
+    .focus-card {
+        width:75vw
+    }
+  }
+
+  @media screen and (max-width: 300px) {
+    .focus-image {
+        height: 20vh;
+        width:75vw;
+        margin-bottom: 10%
+    }
+    .back-button {
+        margin-top: 10%;
+    }
+    
+    .focus-card {
+        width:75vw
     }
   }
   
-  @media screen and (max-width: 1010px) {
-    .get-random-button {
-      width:35vw;
-      margin-left: 34%;
-    }
-  }
