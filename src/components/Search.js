@@ -14,6 +14,7 @@ export default function Search({search, setSearch, searchResults}) {
                 onChange={e => setSearch(e.target.value)}
                 />
             </form>
+            {!searchResults.length && <p className="no-results">No Results</p>}
         </div>
     )
 }

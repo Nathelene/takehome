@@ -69,14 +69,13 @@ const searchResults = articleData.articles.filter(article => article.title.toLow
   )
 })
 
-
   return (
     <div className="App">
      <Nav />
-     <Search search={search} setSearch={setSearch}/> 
+     <Search search={search} setSearch={setSearch} searchResults={searchResults}/>
       <Routes>
         <Route path="/" element={ <div className="home">
-          {!search ? <p>{articleCards}</p> : searchResults }
+          {!search ?  <p>{articleCards}</p>  : searchResults }
           </div>}/>
         <Route path="/article/:title" element={ <ArticleFocus title={title} description={description} content={content} date={date} img={img} clear={clear}/> } />
       </Routes>
