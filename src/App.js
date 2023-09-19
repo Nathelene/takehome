@@ -4,6 +4,7 @@ import './App.css';
 import Nav from './components/Nav'
 import Card from './components/Card'
 import Search from './components/Search'
+import PageNotFound from './components/PageNotFound';
 import ArticleFocus from './components/ArticleFocus'
 import { Routes, Route } from 'react-router-dom'
 import  articleData from './ArticleMockData';
@@ -81,6 +82,7 @@ const searchResults = articleData.articles.filter(article => article.title.toLow
           { !search ?  <p>{articleCards}</p>  : searchResults }
           </div>}/>
         <Route path="/article/:title" element={ !search ?<ArticleFocus title={title} description={description} content={content} date={date} img={img} clear={clear}/> : searchResults } />
+        <Route path="*" element={<PageNotFound />}/>
       </Routes>
     </div>
   );
