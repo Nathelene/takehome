@@ -17,3 +17,128 @@
     width:20vw;
     margin-bottom: 5%;
 }
+
+@media screen and (max-width: 1280px) {
+    .article-card {
+        height:27vh;
+        width:50vw;
+    }
+    
+    .image {
+        height: 20vh;
+        width:25vw;
+        margin-bottom: 10%;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .article-card {
+        height:40vh;
+        width:50vw;
+    }
+    
+    .image {
+        height: 25vh;
+        width:27vw;
+        margin-bottom: 10%;
+    }
+  }
+
+  @media screen and (max-width: 912px) {
+    .article-card {
+        height:30vh;
+        width:60vw;
+    }
+    
+    .image {
+        height: 20vh;
+        width:30vw;
+        margin-bottom: 10%;
+    }
+  }
+
+@media screen and (max-width: 820px) {
+    .article-card {
+        height:25vh;
+        width:70vw;
+    }
+    
+    .image {
+        height: 20vh;
+        width:30vw;
+        margin-bottom: 10%;
+    }
+  }
+  @media screen and (max-width: 770px) {
+    .article-card {
+        height:30vh;
+        width:70vw;
+    }
+    
+    .image {
+        height: 20vh;
+        width:33vw;
+        margin-bottom: 10%;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    .article-card {
+        height:35vh;
+    }
+    .image {
+        height: 20vh;
+        width:35vw;
+        margin-bottom: 10%;
+    }
+    
+  }
+  @media screen and (max-width: 540px) {
+    .article-card {
+        height:38vh;
+    }
+    .image {
+        height: 15vh;
+        width: 40vw;
+    }
+  }
+
+  @media screen and (max-width: 414px) {
+    .article-card {
+        height:35vh;
+    }
+    
+    .image {
+        height: 15vh;
+      
+    }
+  }
+
+@media screen and (max-width: 375px) {
+    .article-card {
+        height:60vh;
+        width:70vw;
+        margin-bottom: 15%;
+    }
+    
+    .image {
+        height: 20vh;
+        width:60vw;
+        margin-bottom: 15%;
+    }
+  }
+
+  @media screen and (max-width: 300px) {
+    .article-card {
+        height:65vh;
+        width:70vw;
+    }
+    
+    .image {
+        height: 15vh;
+        margin-bottom: 20%;
+    }
+  }
+  
+
+  
