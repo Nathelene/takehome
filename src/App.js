@@ -15,6 +15,7 @@ const App = () => {
   const [content, setContent] = useState("")
   const [date, setDate] = useState("")
   const [img, setImg] = useState("")
+  const [search, setSearch] = useState("")
 
   //https://newsapi.org/v2/everything?q=Apple&from=2023-09-18&sortBy=popularity&apiKey=API_KEY
   //KEY = 661718b383d64c97a5b747739086a400
@@ -23,7 +24,6 @@ const App = () => {
    
     articleData.articles.forEach(article => {
       console.log(article.title)
-
       if(e.target.id === article.title) {
         setTitle(article.title)
         setDescription(article.description)
@@ -33,9 +33,7 @@ const App = () => {
     
       }
     })
-
     console.log(e.target.id, 'e.target.id')
-    console.log('hey')
   }
 
   const clear = () => {
@@ -58,13 +56,25 @@ const articleCards = articleData.articles.map(article => {
   )
 })
 
+const searchResults = articleData.articles.filter(article => article.title.toLowerCase().includes(search.toLowerCase() || search)).map(article => {
+  return (
+    <Card 
+    title = {article.title}
+    description={article.description}
+    date={article.publishedAt}
+    img={article.urlToImage}
+    selectArticle={(e) => selectArticle(e)}
+    />
+  )
+})
+
 
   return (
     <div className="App">
-     <Nav />
+     <Nav search={search} setSearch={setSearch} />
       <Routes>
         <Route path="/" element={ <div className="home">
-          <p>{articleCards}</p>
+          {!search ? <p>{articleCards}</p> : searchResults }
           </div>}/>
         <Route path="/article/:title" element={ <ArticleFocus title={title} description={description} content={content} date={date} img={img} clear={clear}/> } />
       </Routes>
