@@ -11,7 +11,7 @@
 
 .focus-card {
     height:70vh;
-    width:50vw
+    width:50vw;
 }
 
 @media screen and (max-width: 912px) {
@@ -43,6 +43,7 @@
         width:75vw;
         margin-bottom: 10%
     }
+    
     .back-button {
         margin-top: 10%;
     }
