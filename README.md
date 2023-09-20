@@ -19,11 +19,12 @@ User Stories
 
 Original Wireframe
 
+- Home View
 <img width="983" alt="Screen Shot 2023-09-20 at 1 16 07 PM" src="https://user-images.githubusercontent.com/121268293/269393914-2bfe2fda-db59-4818-b5ee-2ff0a6780a42.png">
-Home View
 
+- Detailed View
 <img width="970" alt="Screen Shot 2023-09-20 at 1 18 48 PM" src="https://user-images.githubusercontent.com/121268293/269394487-7d1785bd-43e0-40be-ac4d-28d521fc70da.png">
-Detailed View
+
 
 ## PREVIEW OF THE APP
 <img width="1440" alt="Screen Shot 2023-09-20 at 1 35 45 PM" src="https://user-images.githubusercontent.com/121268293/269398457-fd5657c5-39cb-49bd-a449-f48b5ee04f38.png">
