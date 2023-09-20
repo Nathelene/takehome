@@ -3,14 +3,16 @@ import { NavLink } from 'react-router-dom'
 
  const Card = ({title, description, date, img, selectArticle}) => {
 
+    const handleButtonClick = () => {
+        selectArticle({ target: { id: title } }); 
+      }
+
     return (
        
             <div className="article-card">
-
                  <NavLink to={`/article/${title}`}>
-                 <button onClick={selectArticle} id={title} className="card-button">
-           
-                <h3>{title}</h3>
+                 <button onClick={handleButtonClick} id={title} className="card-button">
+                <h2>{title}</h2>
                     <p>{description}</p>
                     <p>{date}</p>
                     <img className="image" src={img}/>  

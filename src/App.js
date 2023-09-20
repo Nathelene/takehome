@@ -30,9 +30,8 @@ const App = () => {
       console.log(article.title)
       if(e.target.id === article.title) {
         setTitle(article.title)
-        setDescription(article.description)
         setContent(article.content)
-        setDate(article.publishedAt)
+        setDate(article.publishedAt.slice(0,10))
         setImg(article.urlToImage)
         setSearch("")
    
@@ -54,7 +53,7 @@ const articleCards = articleData.articles.map(article => {
     <Card 
     title = {article.title}
     description={article.description}
-    date={article.publishedAt}
+    date={article.publishedAt.slice(0,10)}
     img={article.urlToImage}
     selectArticle={(e) => selectArticle(e)}
     />
@@ -66,7 +65,7 @@ const searchResults = articleData.articles.filter(article => article.title.toLow
     <Card 
     title = {article.title}
     description={article.description}
-    date={article.publishedAt}
+    date={article.publishedAt.slice(0,10)}
     img={article.urlToImage}
     selectArticle={(e) => selectArticle(e)}
     />
@@ -75,13 +74,16 @@ const searchResults = articleData.articles.filter(article => article.title.toLow
 
   return (
     <div className="App">
-     <Nav />
+       <link rel="preconnect" href="https://fonts.googleapis.com"/>
+       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+       <link href="https://fonts.googleapis.com/css2?family=Lumanosimo&family=Newsreader:opsz@6..72&family=Roboto:wght@100&display=swap" rel="stylesheet"/>
      <Search search={search} setSearch={setSearch} searchResults={searchResults}/>
+     <Nav />
       <Routes>
         <Route path="/" element={ <div className="home">
           { !search ?  <p>{articleCards}</p>  : searchResults }
           </div>}/>
-        <Route path="/article/:title" element={ !search ?<ArticleFocus title={title} description={description} content={content} date={date} img={img} clear={clear}/> : searchResults } />
+        <Route path="/article/:title" element={ !search ?<ArticleFocus title={title} content={content} date={date} img={img} clear={clear}/> : searchResults } />
         <Route path="*" element={<PageNotFound />}/>
       </Routes>
     </div>
