@@ -32,7 +32,7 @@ const App = () => {
         setTitle(article.title)
         setDescription(article.description)
         setContent(article.content)
-        setDate(article.publishedAt)
+        setDate(article.publishedAt.slice(0,10))
         setImg(article.urlToImage)
         setSearch("")
    
@@ -54,7 +54,7 @@ const articleCards = articleData.articles.map(article => {
     <Card 
     title = {article.title}
     description={article.description}
-    date={article.publishedAt}
+    date={article.publishedAt.slice(0,10)}
     img={article.urlToImage}
     selectArticle={(e) => selectArticle(e)}
     />
@@ -66,7 +66,7 @@ const searchResults = articleData.articles.filter(article => article.title.toLow
     <Card 
     title = {article.title}
     description={article.description}
-    date={article.publishedAt}
+    date={article.publishedAt.slice(0,10)}
     img={article.urlToImage}
     selectArticle={(e) => selectArticle(e)}
     />
