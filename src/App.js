@@ -82,8 +82,12 @@ const searchResults = articleData.articles.filter(article => article.title.toLow
       <Routes>
         <Route path="/" element={ <div className="home">
           { !search ?  <p>{articleCards}</p>  : searchResults }
+          { !searchResults.length && <p className="no-results">No Results</p>}
           </div>}/>
-        <Route path="/article/:title" element={ !search ?<ArticleFocus title={title} content={content} date={date} img={img} clear={clear}/> : searchResults } />
+        <Route path="/article/:title" element={ <div className="detailed">
+          {!search ?<ArticleFocus title={title} content={content} date={date} img={img} clear={clear}/> : searchResults  }
+          { !searchResults.length && <p className="no-results">No Results</p>} 
+       </div> }/>
         <Route path="*" element={<PageNotFound />}/>
       </Routes>
     </div>

@@ -24,7 +24,6 @@ const options = {
                 onChange={e => setSearch(e.target.value)}
                 />
             </form>
-            {!searchResults.length && <p className="no-results">No Results</p>}
         </div>
     )
 }
