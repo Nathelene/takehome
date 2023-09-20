@@ -24,6 +24,11 @@ Home View
 
 <img width="970" alt="Screen Shot 2023-09-20 at 1 18 48 PM" src="https://user-images.githubusercontent.com/121268293/269394487-7d1785bd-43e0-40be-ac4d-28d521fc70da.png">
 Detailed View
+
+## PREVIEW OF THE APP
+<img width="1440" alt="Screen Shot 2023-09-20 at 1 35 45 PM" src="https://user-images.githubusercontent.com/121268293/269398457-fd5657c5-39cb-49bd-a449-f48b5ee04f38.png">
+
+<img width="1437" alt="Screen Shot 2023-09-20 at 1 36 26 PM" src="https://user-images.githubusercontent.com/121268293/269398601-7d528f09-4c54-441f-be1d-cc50bdfe6582.png">
   
 ## TECHNOLOGIES USED 
 <div>
