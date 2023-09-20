@@ -12,7 +12,6 @@ import { NavLink } from 'react-router-dom'
             <div className="article-card">
                  <NavLink to={`/article/${title}`}>
                  <button onClick={handleButtonClick} id={title} className="card-button">
-           
                 <h2>{title}</h2>
                     <p>{description}</p>
                     <p>{date}</p>

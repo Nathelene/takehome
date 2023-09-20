@@ -2,7 +2,6 @@ import './Nav.css'
 
 export default function Nav() {
 
-
     return (
         <nav className="nav">
             <link rel="preconnect" href="https://fonts.googleapis.com"/>

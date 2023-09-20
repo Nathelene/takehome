@@ -1,15 +1,15 @@
 .article-card {
-    display:flex; 
-    flex-direction: row; 
     height:20vh;
     width:40vw;
     margin-bottom: 33%;
 }
 
 .card-button {
-   border:none;
-   border-bottom: 2px solid black;
+    /* display: flex; */
+    border:none;
+    border-bottom: 2px solid black;
     background-color: transparent;
+    /* flex-direction: row; */
 }
 
 .image {
