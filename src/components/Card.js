@@ -13,7 +13,7 @@ import { NavLink } from 'react-router-dom'
                  <NavLink to={`/article/${title}`}>
                  <button onClick={handleButtonClick} id={title} className="card-button">
            
-                <h3>{title}</h3>
+                <h2>{title}</h2>
                     <p>{description}</p>
                     <p>{date}</p>
                     <img className="image" src={img}/>  

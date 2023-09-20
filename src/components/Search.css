@@ -1,4 +1,15 @@
+.search-container {
+  display:flex;
+  height: 5.5vh;
+  width: 98vw;
+  align-items: center;
+  justify-content: space-between;
+ 
+}
 
+.search {
+  height:2.8vh;
+}
 
 @media screen and (max-width: 820px) {
     .search {

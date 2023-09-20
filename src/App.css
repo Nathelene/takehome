@@ -1,8 +1,11 @@
 .App {
   display:flex;
   align-items: center;
-  text-align: center;
   flex-direction: column;
+  text-align: center;
+}
+* {
+  font-family: 'Newsreader', serif;
 }
 
 
