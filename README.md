@@ -2,9 +2,9 @@
 ## ABSTRACT
 This application provides a seamless user experience allowing you to view, select, and search for news articles.
 
-## Requirements + Planning
+## REQUIREMENTS + PLANNING
 
-Challenge Requirements
+### Challenge Requirements
 - A list of articles (headline, image, description if present, date)
 - A “detailed” view for each article (headline, image, date, content, source)
 - Articles in the list must link to a detailed article view within your app (linking to the source website does not fulfill this requirement)
@@ -12,12 +12,12 @@ Challenge Requirements
 - The app should be created within an 8 hour time limit
 - Create a basic UI allowing for a seamless user experience and meeting mvp expectations
 
-User Stories
+### User Stories
 - As a user I'm able to view all available articles on pageload
 - As a user I can select an article to view further information
 - As a user I can search for specific article titles
 
-Original Wireframe
+### Original Wireframe
 
 - Home View
 <img width="983" alt="Screen Shot 2023-09-20 at 1 16 07 PM" src="https://user-images.githubusercontent.com/121268293/269393914-2bfe2fda-db59-4818-b5ee-2ff0a6780a42.png">
