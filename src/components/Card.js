@@ -16,7 +16,6 @@ import { NavLink } from 'react-router-dom'
                     <p>{description}</p>
                     <p>{date}</p>
                     <img className="image" src={img}/>  
-          
                     </button>
         </NavLink>
        
