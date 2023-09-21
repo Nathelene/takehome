@@ -19,11 +19,7 @@ const App = () => {
   const [img, setImg] = useState("")
   const [search, setSearch] = useState("")
   const [articles, setArticles] = useState([])
-
-  
-
-  //https://newsapi.org/v2/everything?q=Apple&from=2023-09-18&sortBy=popularity&apiKey=API_KEY
-  //KEY = 661718b383d64c97a5b747739086a400
+  const [error, setError] = useState("")
   
 
 useEffect(() => {
@@ -35,6 +31,7 @@ useEffect(() => {
       return res.json()
     })
     .then(data => setArticles(data.articles))
+    .catch(err => setError(err.message))
 })
 
 
@@ -97,8 +94,9 @@ const searchResults = articles.filter(article => article.title.toLowerCase().inc
      <Nav />
       <Routes>
         <Route path="/" element={ <div className="home">
-          { !search ?  <p>{articleCards}</p>  : searchResults }
-          { !searchResults.length && <p className="no-results">No Results</p>}
+          { error ? <h3>{error}</h3> :
+           !search ?  <p>{articleCards}</p>  : searchResults }
+          { !searchResults.length && <p className="no-results">No Results</p>} 
           </div>}/>
         <Route path="/article/:title" element={ <div className="detailed">
           {!search ?<ArticleFocus title={title} content={content} date={date} img={img} clear={clear}/> : searchResults  }
