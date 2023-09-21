@@ -8,7 +8,7 @@ import PageNotFound from './components/PageNotFound';
 import ArticleFocus from './components/ArticleFocus'
 import { Routes, Route } from 'react-router-dom'
 import  articleData from './ArticleMockData';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const App = () => {
 
@@ -18,15 +18,28 @@ const App = () => {
   const [date, setDate] = useState("")
   const [img, setImg] = useState("")
   const [search, setSearch] = useState("")
-
+  const [articles, setArticles] = useState([])
+  const [error, setError] = useState("")
   
 
-  //https://newsapi.org/v2/everything?q=Apple&from=2023-09-18&sortBy=popularity&apiKey=API_KEY
-  //KEY = 661718b383d64c97a5b747739086a400
-  
+useEffect(() => {
+  fetch('https://newsapi.org/v2/everything?q=Apple&from=2023-09-18&sortBy=popularity&apiKey=661718b383d64c97a5b747739086a400')
+    .then(res => {
+      if(!res.ok) {
+        throw Error('Unexpected error. Please refresh the page')
+      }
+      return res.json()
+    })
+    .then(data => setArticles(data.articles))
+    .catch(err => setError(err.message))
+})
+
+
+
+
   const selectArticle = (e) => {
    
-    articleData.articles.forEach(article => {
+    articles.forEach(article => {
       console.log(article.title)
       if(e.target.id === article.title) {
         setTitle(article.title)
@@ -48,7 +61,7 @@ const App = () => {
     setImg("")
   }
 
-const articleCards = articleData.articles.map(article => {
+const articleCards = articles.map(article => {
   return (
     <Card 
     title = {article.title}
@@ -60,7 +73,7 @@ const articleCards = articleData.articles.map(article => {
   )
 })
 
-const searchResults = articleData.articles.filter(article => article.title.toLowerCase().includes(search.toLowerCase() || search)).map(article => {
+const searchResults = articles.filter(article => article.title.toLowerCase().includes(search.toLowerCase() || search)).map(article => {
   return (
     <Card 
     title = {article.title}
@@ -81,8 +94,9 @@ const searchResults = articleData.articles.filter(article => article.title.toLow
      <Nav />
       <Routes>
         <Route path="/" element={ <div className="home">
-          { !search ?  <p>{articleCards}</p>  : searchResults }
-          { !searchResults.length && <p className="no-results">No Results</p>}
+          { error ? <h3>{error}</h3> :
+           !search ?  <p>{articleCards}</p>  : searchResults }
+          { !searchResults.length && <p className="no-results">No Results</p>} 
           </div>}/>
         <Route path="/article/:title" element={ <div className="detailed">
           {!search ?<ArticleFocus title={title} content={content} date={date} img={img} clear={clear}/> : searchResults  }
